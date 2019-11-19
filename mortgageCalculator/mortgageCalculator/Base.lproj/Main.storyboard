@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="N5n-9l-EID" kind="relationship" relationship="viewControllers" id="u5y-cp-fyG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--INPUT-->
+        <scene sceneID="UV0-4W-u8I">
+            <objects>
+                <viewController id="N5n-9l-EID" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dAF-nP-rXG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z0q-5i-DeR">
+                                <rect key="frame" x="198" y="270" width="196" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCA-8r-oQu">
+                                <rect key="frame" x="198" y="335" width="196" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2J-Kv-mhz">
+                                <rect key="frame" x="198" y="392" width="196" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-DU-LOS">
+                                <rect key="frame" x="198" y="446" width="196" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mortgage Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3i-Zq-Hgt">
+                                <rect key="frame" x="33" y="277" width="139" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Term" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xq3-Ui-xtY">
+                                <rect key="frame" x="33" y="342" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Intrest Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efW-9c-ObQ">
+                                <rect key="frame" x="33" y="399" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9A-T4-UUs">
+                                <rect key="frame" x="33" y="453" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5tr-DU-LOS" firstAttribute="top" secondItem="I2J-Kv-mhz" secondAttribute="bottom" constant="20" id="36j-sb-BdT"/>
+                            <constraint firstItem="oCA-8r-oQu" firstAttribute="trailing" secondItem="I2J-Kv-mhz" secondAttribute="trailing" id="4dJ-hL-q9W"/>
+                            <constraint firstItem="Z0q-5i-DeR" firstAttribute="trailing" secondItem="oCA-8r-oQu" secondAttribute="trailing" id="ASl-gG-zLq"/>
+                            <constraint firstItem="Z0q-5i-DeR" firstAttribute="leading" secondItem="3Rd-FK-L76" secondAttribute="leading" constant="198" id="RHi-O6-EHb"/>
+                            <constraint firstItem="3Rd-FK-L76" firstAttribute="trailing" secondItem="Z0q-5i-DeR" secondAttribute="trailing" constant="20" id="WcE-1H-9u5"/>
+                            <constraint firstItem="I2J-Kv-mhz" firstAttribute="leading" secondItem="5tr-DU-LOS" secondAttribute="leading" id="aK8-Dg-rHT"/>
+                            <constraint firstItem="oCA-8r-oQu" firstAttribute="top" secondItem="Z0q-5i-DeR" secondAttribute="bottom" constant="31" id="buJ-IT-947"/>
+                            <constraint firstItem="Z0q-5i-DeR" firstAttribute="top" secondItem="3Rd-FK-L76" secondAttribute="top" constant="226" id="eQk-mH-Awz"/>
+                            <constraint firstItem="I2J-Kv-mhz" firstAttribute="trailing" secondItem="5tr-DU-LOS" secondAttribute="trailing" id="i04-HU-zNv"/>
+                            <constraint firstItem="I2J-Kv-mhz" firstAttribute="top" secondItem="oCA-8r-oQu" secondAttribute="bottom" constant="23" id="jcA-ga-xzR"/>
+                            <constraint firstItem="Z0q-5i-DeR" firstAttribute="leading" secondItem="oCA-8r-oQu" secondAttribute="leading" id="q5W-Eh-bke"/>
+                            <constraint firstItem="oCA-8r-oQu" firstAttribute="leading" secondItem="I2J-Kv-mhz" secondAttribute="leading" id="vHF-wC-Ovf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Rd-FK-L76"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="INPUT" id="nT9-ct-Mcr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLO-NY-I9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926.08695652173924" y="17.410714285714285"/>
+        </scene>
+    </scenes>
+</document>
