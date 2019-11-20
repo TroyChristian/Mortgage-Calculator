@@ -85,6 +85,9 @@
                                 <rect key="frame" x="127" y="511" width="160" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate Mortgage"/>
+                                <connections>
+                                    <action selector="calculateMortgageButton:" destination="N5n-9l-EID" eventType="touchUpInside" id="dGE-Du-2PK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

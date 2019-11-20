@@ -8,9 +8,30 @@
 
 import UIKit
 
-class InputViewController: UIViewController, UITextFieldDelegate {
+class InputViewController: UIViewController{
 
-   
+    @IBAction func calculateMortgageButton(_ sender: Any) {
+       
+        guard let mortgageLoan = mortgageAmountOutlet.text?.floatValue else {return}
+        mortgageAmount = mortgageLoan
+        guard let time = termOutlet.text?.floatValue else {return}
+        term = time
+        
+        guard let interest = interestRateOutlet.text?.floatValue else {return}
+        interestRate = interest
+        
+        guard let date = startDateOutlet.text else {return}
+        startDate = date
+        
+        print(mortgageLoan)
+        print(term)
+        print(interestRate)
+        print(startDate)
+      
+       
+        
+    }
+
     @IBOutlet weak var mortgageAmountOutlet: UITextField!
   
     
@@ -20,7 +41,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var startDateOutlet: UITextField!
    
-    var mortgageAmount:Float = 0.00
+    var mortgageAmount:Float = 6.66
     var term:Float = 30
     var interestRate:Float = 5.0
     var startDate:String = "7-10-2018"
@@ -30,13 +51,11 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mortgageAmountOutlet.delegate = self
-        mortgageAmountOutlet.placeholder = updateAmount()
+     
+        
         //STANDARD INPUTS
         
-        mortgageAmountOutlet?.text = String(mortgageAmount)
-        termOutlet.text? = String(term)
-        interestRateOutlet.text? = String(interestRate)
+     
        
        
         
@@ -72,30 +91,13 @@ class InputViewController: UIViewController, UITextFieldDelegate {
       
     var datePicker = UIDatePicker()
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string:String) -> Bool {
-        if let digit = Int(string) {
-            amt = amt * 10 + digit
-            
-            mortgageAmountOutlet.text = updateAmount()
-        }
-        
-        if string == "" {
-            amt = amt/10
-            mortgageAmountOutlet.text = updateAmount()
-        }
-        return false
-    }
+  
    
     
     
     
     
-    func updateAmount() -> String? {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = NumberFormatter.Style.currency
-        let amount = Double(amt/100) + Double(amt%100)/100
-        return formatter.string(from: NSNumber(value:amount))
-    }
+ 
     
     @objc
     func viewTapped(gestureRecognizer: UITapGestureRecognizer){
@@ -117,4 +119,9 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     */
 
 
+}
+extension String {
+    var floatValue: Float {
+        return (self as NSString).floatValue
+    }
 }
