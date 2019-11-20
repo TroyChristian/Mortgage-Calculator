@@ -28,7 +28,7 @@
         <!--INPUT-->
         <scene sceneID="UV0-4W-u8I">
             <objects>
-                <viewController id="N5n-9l-EID" sceneMemberID="viewController">
+                <viewController id="N5n-9l-EID" customClass="InputViewController" customModule="mortgageCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dAF-nP-rXG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,6 +100,12 @@
                         <viewLayoutGuide key="safeArea" id="3Rd-FK-L76"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="INPUT" id="nT9-ct-Mcr"/>
+                    <connections>
+                        <outlet property="interestRateOutlet" destination="I2J-Kv-mhz" id="hXg-OM-ykV"/>
+                        <outlet property="mortgageAmountOutlet" destination="Z0q-5i-DeR" id="ZDK-h7-WV7"/>
+                        <outlet property="startDateOutlet" destination="5tr-DU-LOS" id="Qyh-Um-Xyn"/>
+                        <outlet property="termOutlet" destination="oCA-8r-oQu" id="JBk-YF-fQB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLO-NY-I9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
