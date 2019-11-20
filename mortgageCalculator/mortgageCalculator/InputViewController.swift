@@ -20,7 +20,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var startDateOutlet: UITextField!
    
-    var mortgageAmount:Float = 1000000.00
+    var mortgageAmount:Float = 0.00
     var term:Float = 30
     var interestRate:Float = 5.0
     var startDate:String = "7-10-2018"
@@ -47,8 +47,13 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         datePicker.setDate(Date(), animated:false)
         datePicker.datePickerMode = .date
         datePicker.addTarget(self, action: #selector(datePickerChanged(datePicker:)), for: .valueChanged)
+        view.endEditing(true)
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer:)))
         
+        view.addGestureRecognizer(tapGesture)
+        
+
        
 
         
@@ -91,7 +96,14 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         let amount = Double(amt/100) + Double(amt%100)/100
         return formatter.string(from: NSNumber(value:amount))
     }
+    
+    @objc
+    func viewTapped(gestureRecognizer: UITapGestureRecognizer){
+        view.endEditing(true)
+        
+        
     }
+  
     
 
     /*
@@ -105,3 +117,4 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     */
 
 
+}
