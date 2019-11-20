@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InputViewController: UIViewController {
+class InputViewController: UIViewController, UITextFieldDelegate {
 
    
     @IBOutlet weak var mortgageAmountOutlet: UITextField!
@@ -20,14 +20,18 @@ class InputViewController: UIViewController {
     
     @IBOutlet weak var startDateOutlet: UITextField!
    
-    var mortgageAmount:Int = 1000000
-    var term:Int = 30
+    var mortgageAmount:Float = 1000000.00
+    var term:Float = 30
     var interestRate:Float = 5.0
     var startDate:String = "7-10-2018"
+    var amt:Int = 0
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mortgageAmountOutlet.delegate = self
+        mortgageAmountOutlet.placeholder = updateAmount()
         //STANDARD INPUTS
         
         mortgageAmountOutlet?.text = String(mortgageAmount)
@@ -60,8 +64,33 @@ class InputViewController: UIViewController {
         startDateOutlet.text = formattedDateString
     }
  
-        // Do any additional setup after loading the view.
+      
     var datePicker = UIDatePicker()
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string:String) -> Bool {
+        if let digit = Int(string) {
+            amt = amt * 10 + digit
+            
+            mortgageAmountOutlet.text = updateAmount()
+        }
+        
+        if string == "" {
+            amt = amt/10
+            mortgageAmountOutlet.text = updateAmount()
+        }
+        return false
+    }
+   
+    
+    
+    
+    
+    func updateAmount() -> String? {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = NumberFormatter.Style.currency
+        let amount = Double(amt/100) + Double(amt%100)/100
+        return formatter.string(from: NSNumber(value:amount))
+    }
     }
     
 
